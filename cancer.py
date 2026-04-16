@@ -1,11 +1,11 @@
 import streamlit as st
 import pickle
 import numpy as np
-import requests
+
 
 # Load a mpodel 
-model = pickle.load(open("model.pkl" , "rb"))
-scaler = pickle.load(open("scaler.pkl" , 'rb'))
+model = pickle.load(open("model.pkl","rb"))
+scaler = pickle.load(open("scaler.pkl",'rb'))
 
 st.title("Cancer Detection App")
 #st.write("Enter values: ")
