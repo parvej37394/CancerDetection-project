@@ -1,11 +1,11 @@
 import streamlit as st
 import pickle
 import numpy as np
-
+import requests
 
 # Load a mpodel 
-model = pickle.load(open("model (2).pkl" , "rb"))
-scaler = pickle.load(open("scaler (3).pkl" , 'rb'))
+model = pickle.load(open("model.pkl" , "rb"))
+scaler = pickle.load(open("scaler.pkl" , 'rb'))
 
 st.title("Cancer Detection App")
 #st.write("Enter values: ")
@@ -39,4 +39,4 @@ if st.button("Predict"):
     if prediction[0] ==1:
         st.error("Cncer Detected (maligant)")
     else:
-        st.success("No Cancer (Bengign)")
+        st.success("No Cancer (Bengign) ")
